@@ -25,6 +25,11 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log('in app.js');
+    console.log(expense);
+  };
+
   // this is what JSX does under the hood
   // needs "import React wherever it's used, or it used to anyway"
   // return React.createElement(
@@ -36,7 +41,7 @@ function App() {
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
